@@ -101,6 +101,13 @@ a {
   padding: 20px;
 }
 
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header-logo {
   font-size: 24px;
   letter-spacing: 0.06em;
@@ -120,11 +127,6 @@ a {
 }
 
 /* #region tablet */
-.header {
-  border: #14c57c 1px solid;
-}
-
-/* //todo кнопки меню */
 
 .header-nav-list-item {
   font-family: 'Poppins', sans-serif;
@@ -136,7 +138,8 @@ a {
   .header {
     padding: 32px;
   }
-  /* //todo кнопка зміни теми */
+
+  /* Перемикач теми */
   .theme-toggle {
     width: 42px;
     height: 21px;
@@ -155,27 +158,40 @@ a {
   .theme-toggle {
     display: none;
   }
-  /* //todo header-logo */
+
+  /* Логотип */
   .header-logo {
     font-size: 32px;
   }
-  /* //todo burger hidden */
-  .burget-btn {
+
+  /* Ховаємо бургер на планшетах */
+  .burger-btn {
     display: none;
   }
-  /* //todo menu */
+
+  /* Стилі для меню на планшетах */
   .header-nav-list {
     display: flex;
     gap: 40px;
-    margin-left: 150px;
+  }
+
+  /* Встановлення динамічної відстані між логотипом і меню */
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Динамічна відстань */
+    width: 100%;
   }
 }
-
 /* #endregion tablet */
 /* #region desktop */
+@media only screen and (min-width: 1280px) {
+  .header {
+    max-width: 1280px;
+    width: 100%;
+    padding: 32px;
+  }
 
-/* //todo кнопка зміни теми */
-@media only screen and (min-width: 1200px) {
+  /* Перемикач теми */
   .theme-toggle {
     width: 48px;
     height: 24px;
@@ -191,6 +207,28 @@ a {
     width: 19px;
     height: 19px;
   }
+
+  /* Логотип */
+  .header-logo {
+    font-size: 32px;
+  }
+
+  /* Ховаємо бургер на десктопах */
+  .burger-btn {
+    display: none;
+  }
+
+  /* Стилі для меню на десктопах */
+  .header-nav-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  /* Динамічна відстань між елементами на десктопі */
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Динамічна відстань */
+    width: 100%;
+  }
 }
-/* #endregion
-desktop */
+/* #endregion desktop */
