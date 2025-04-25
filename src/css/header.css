@@ -3,17 +3,15 @@
 /* темний режим */
 body.dark-theme {
   background-color: #1e2023;
+  color: #f0f0f0;
 }
 
 /* Стилі для контейнера перемикача */
 .theme-toggle {
-  /* position: fixed; */
-  top: 20px;
-  right: 20px;
-  width: 48px;
-  height: 24px;
+  width: 36px;
+  height: 18px;
   border-radius: 16px;
-  background: #f0f0f0;
+  background: #e4e5e6;
   display: flex;
   align-items: center;
   padding: 0 4px;
@@ -28,8 +26,8 @@ body.dark-theme {
 
 /* Стилі для кружка-перемикача */
 .toggle-slider {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #14c57c;
   position: relative;
@@ -43,7 +41,7 @@ body.dark-theme .theme-toggle {
 
 /* Темна тема - переміщення кружка вправо */
 body.dark-theme .toggle-slider {
-  transform: translateX(32px);
+  transform: translateX(16px);
   background: #14c57c;
 }
 
@@ -53,11 +51,11 @@ body.dark-theme .toggle-slider::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: #2a2d32;
-  transform: translateX(-6px);
+  transform: translate(-6px, -1px);
   transition: transform 0.4s ease;
 }
 
@@ -87,7 +85,61 @@ a {
 
 /* #endregion burger-to-delete */
 
+/* #region mobile */
+.header-logo {
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.logo-accent {
+  color: var(--accent-green);
+}
+/* //? Приховати меню на мобілці */
+
+@media only screen and (max-width: 767px) {
+  .header-nav-list {
+    display: none;
+  }
+}
+
+.header {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* #endregion mobile */
+
 /* //? kill this */
 .abc {
   display: block;
 }
+
+/* #region tablet */
+
+@media only screen and (min-width: 768px) {
+  .theme-toggle {
+    width: 42px;
+    height: 21px;
+  }
+  .toggle-slider {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* #endregion tablet */
+/* #region desktop */
+@media only screen and (min-width: 1200px) {
+  .theme-toggle {
+    width: 48px;
+    height: 24px;
+  }
+  .toggle-slider {
+    width: 16px;
+    height: 16px;
+  }
+}
+/* #endregion
+desktop */
