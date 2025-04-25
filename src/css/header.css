@@ -117,28 +117,44 @@ a {
 }
 
 /* #region tablet */
-
+/* //todo кнопка зміни теми */
 @media only screen and (min-width: 768px) {
   .theme-toggle {
     width: 42px;
     height: 21px;
   }
   .toggle-slider {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
+  }
+  body.dark-theme .toggle-slider {
+    transform: translateX(20px);
+  }
+  body.dark-theme .toggle-slider::before {
+    width: 16px;
+    height: 16px;
   }
 }
 
 /* #endregion tablet */
 /* #region desktop */
+
+/* //todo кнопка зміни теми */
 @media only screen and (min-width: 1200px) {
   .theme-toggle {
     width: 48px;
     height: 24px;
   }
   .toggle-slider {
-    width: 16px;
-    height: 16px;
+    width: 19px;
+    height: 19px;
+  }
+  body.dark-theme .toggle-slider {
+    transform: translateX(21px);
+  }
+  body.dark-theme .toggle-slider::before {
+    width: 19px;
+    height: 19px;
   }
 }
 /* #endregion
