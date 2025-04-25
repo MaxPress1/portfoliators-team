@@ -86,15 +86,6 @@ a {
 /* #endregion burger-to-delete */
 
 /* #region mobile */
-.header-logo {
-  font-size: 24px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-.logo-accent {
-  color: var(--accent-green);
-}
-/* //? Приховати меню на мобілці */
 
 @media only screen and (max-width: 767px) {
   .header-nav-list {
@@ -107,6 +98,18 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+}
+
+.header-logo {
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.logo-accent {
+  color: var(--accent-green);
 }
 
 /* #endregion mobile */
@@ -117,8 +120,20 @@ a {
 }
 
 /* #region tablet */
-/* //todo кнопка зміни теми */
+.header {
+  border: #14c57c 1px solid;
+}
+
+/* //todo кнопки меню */
+
+.header-nav-list-item {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+
 @media only screen and (min-width: 768px) {
+  /* //todo кнопка зміни теми */
   .theme-toggle {
     width: 42px;
     height: 21px;
@@ -133,6 +148,23 @@ a {
   body.dark-theme .toggle-slider::before {
     width: 16px;
     height: 16px;
+  }
+  .theme-toggle {
+    display: none;
+  }
+  /* //todo header-logo */
+  .header-logo {
+    font-size: 32px;
+  }
+  /* //todo burger hidden */
+  .burget-btn {
+    display: none;
+  }
+  /* //todo menu */
+  .header-nav-list {
+    display: flex;
+    gap: 40px;
+    margin-left: 150px;
   }
 }
 
