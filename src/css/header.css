@@ -133,6 +133,9 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
+  .header {
+    padding: 32px;
+  }
   /* //todo кнопка зміни теми */
   .theme-toggle {
     width: 42px;
