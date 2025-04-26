@@ -1,11 +1,34 @@
-.wrap-together {
+.together-section {
   position: relative;
+  background-color: #f7f7f7; /* світлий фон */
+  overflow: visible;
+}
+.container {
+  position: relative;
+  z-index: 1;
+}
+.background {
+  position: absolute;
+  background-position: top right 640px;
+
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/webp/background/backgpound-desktop-1x.png');
+  /* background-size: cover; */
+
+  background-repeat: no-repeat;
+  z-index: 0; /* фон під контентом */
+}
+.wrap-together {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 80px 50px;
-  /* background-color: #f9f9f9; */
-  overflow: hidden;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 136px;
+  margin-top: 80px;
+  /* overflow: visible; */
+  padding-bottom: 124px;
 }
 
 .title-together {
@@ -13,7 +36,7 @@
   /* align-self: flex-start; */
   font-size: 108px;
   line-height: 124px;
-  font-weight: 400;
+  /* font-weight: 400; */
   margin-bottom: 40px;
   width: 510px;
   color: #292929;
@@ -21,16 +44,6 @@
 
 .title-span {
   color: #00b068;
-}
-
-.wrap-together {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 136px;
-  flex-wrap: wrap; /* для адаптації */
-  margin-top: 80px;
 }
 
 .together-left {
@@ -50,7 +63,7 @@
   font-family: 'Poppins';
   text-transform: uppercase;
   font-size: 20px;
-  line-height: 0, 5;
+  line-height: 32px;
   font-weight: 400;
 }
 .form-together {
@@ -83,7 +96,7 @@
 input::placeholder,
 textarea::placeholder {
   color: #292929;
-  opacity: 3; /* Safari фішка */
+  opacity: 0.8;
 }
 
 .contact-btn {
@@ -95,7 +108,6 @@ textarea::placeholder {
   height: 48px;
   font-family: 'Poppins';
   font-weight: 500;
-  font-size: 16;
   line-height: 16px;
   color: White;
 }
@@ -103,20 +115,19 @@ textarea::placeholder {
 .text-icon {
   font-family: 'Poppins';
   font-weight: 300;
-  line-height: 16px;
   line-height: 24px;
   color: #292929;
-
   padding: 16px;
 }
 .contacts-together {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   gap: 16px;
 }
 
 /* це треба перевірити!!!!!!! */
+
+/*  for tablet */
 @media (max-width: 768px) {
   .wrap-together {
     flex-direction: column;

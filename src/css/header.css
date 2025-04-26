@@ -3,6 +3,7 @@ body.dark-theme {
   background-color: #1e2023;
 }
 
+
 /* Стилі для контейнера перемикача */
 .theme-toggle {
   position: fixed;
