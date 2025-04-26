@@ -1,6 +1,9 @@
 :root {
   --text-color: #292929;
-  --background-color: #F0F0F0;
+  --background-color: #f0f0f0;
+  --accent-green: #00b068;
+  --dark-theme-text-color: #f0f0f0;
+
 
   font-family: 'Impact', 'Poppins', sans-serif;
   font-size: 16px;
@@ -10,7 +13,7 @@
 
 
   color: var(--text-color);
-  background-color:var(--background-color);
+  background-color: var(--background-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
