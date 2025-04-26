@@ -1,7 +1,14 @@
 footer {
-  background-color: var(--background-color);
+  background-color: inherit;
   padding-bottom: 24px;
   font-family: 'Poppins', sans-serif;
+}
+
+hr {
+    border: 1px solid var(--background-color);
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 32px;
 }
 
 
