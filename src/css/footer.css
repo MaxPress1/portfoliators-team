@@ -100,3 +100,16 @@ hr {
         margin-bottom: 44px;
     }
 }
+
+
+body.dark-theme .logo-bold  {
+    color: var(--dark-theme-text-color);
+}
+
+body.dark-theme .footer-social-item {
+    color: var(--dark-theme-text-color);
+}
+
+body.dark-theme .footer-copy{
+    color: var(--dark-theme-text-color);
+}
