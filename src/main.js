@@ -10,3 +10,9 @@ import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
 
 import * as themeSwitcher from './js/theme-switcher';
+
+import './js/faq.js';
+import './js/mobile-menu.js';
+import './js/projects.js';
+import './js/review.js';
+import './js/theme-switcher.js';
