@@ -1,0 +1,217 @@
+/* Mobile */
+.about-me {
+  padding-bottom: 80px;
+}
+
+.about-title {
+  font-family: 'Impact', sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  line-height: 64px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.about-title span {
+  color: var(--accent-green);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  width: 320px;
+  height: 374px;
+  border-radius: 18px;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+
+.bio-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.bio-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.about-text {
+  text-align: center;
+  width: 320px;
+  height: 680px;
+}
+
+.about-lists {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-list-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.lists-about {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+.lists-about li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 8px;
+}
+
+.lists-about li::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background-color: var(--accent-green);
+  border-radius: 1px;
+}
+
+/* Dark theme */
+body.dark-theme .about-title,
+body.dark-theme .bio-title,
+body.dark-theme .bio-text,
+body.dark-theme .about-list-title,
+body.dark-theme .lists-about {
+  color: var(--dark-theme-text-color);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .about-me .container {
+    background-image: url('../img/about/about-background/about-bg-img.png'); /* для планшетів */
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: right -10% bottom 15%;
+  }
+
+  .about-me {
+    padding-bottom: 124px;
+  }
+
+  .about-content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .about-title {
+    font-size: 108px;
+    margin-bottom: 60px;
+  }
+
+  .bio-title {
+    font-size: 36px;
+  }
+
+  .about-image img {
+    width: 336px;
+    height: 392px;
+    margin-top: 368px;
+    margin-bottom: 0;
+  }
+
+  .about-text {
+    text-align: left;
+    width: 336px;
+    height: 600px;
+  }
+
+  .about-lists {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px;
+    gap: 40px;
+  }
+
+  .about-list-title {
+    font-size: 36px;
+  }
+
+  .education,
+  .role {
+    width: 336px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi),
+  only screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .about-me .container {
+    background-image: url('../img/about/about-background/about-bg-img@2x.png');
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  .about-me .container {
+    background-size: 35%;
+    background-position: right 4% bottom 28%;
+  }
+
+  .about-me {
+    padding-bottom: 164px;
+  }
+
+  .about-content {
+    justify-content: right;
+    gap: 136px;
+  }
+
+  .about-image img {
+    margin-top: 272px;
+    width: 384px;
+    height: 448px;
+  }
+
+  .about-text {
+    width: 488px;
+  }
+
+  .about-lists {
+    margin-top: 80px;
+    justify-content: center;
+  }
+
+  .education {
+    margin-left: 50px;
+  }
+
+  .role {
+    margin-left: 150px;
+  }
+}
