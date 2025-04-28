@@ -1,31 +1,27 @@
-/* темний режим */
+/* Dark theme */
 body.dark-theme {
   background-color: #1e2023;
 }
 
-
-/* Стилі для контейнера перемикача */
+/* Style for the theme toggle */
 .theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
   width: 48px;
   height: 24px;
   border-radius: 16px;
-  background: #f0f0f0;
+  background: #e4e5e6;
   display: flex;
   align-items: center;
   padding: 0 4px;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
-/* Сховати чекбокс */
 .theme-toggle input {
   display: none;
 }
 
-/* Стилі для кружка-перемикача */
 .toggle-slider {
   width: 16px;
   height: 16px;
@@ -35,18 +31,15 @@ body.dark-theme {
   transition: transform 0.4s ease, background 0.4s ease;
 }
 
-/* Темна тема - фон перемикача */
 body.dark-theme .theme-toggle {
   background: #2a2d32;
 }
 
-/* Темна тема - переміщення кружка вправо */
 body.dark-theme .toggle-slider {
-  transform: translateX(32px);
+  transform: translateX(24px);
   background: #14c57c;
 }
 
-/* Темна тема - чорний півмісяць */
 body.dark-theme .toggle-slider::before {
   content: '';
   position: absolute;
@@ -58,4 +51,231 @@ body.dark-theme .toggle-slider::before {
   background: #2a2d32;
   transform: translateX(-6px);
   transition: transform 0.4s ease;
+}
+
+/* Navigation */
+.header {
+  padding: 20px 0;
+  position: relative;
+  z-index: 100;
+}
+
+.header-container {
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+  color: #292929;
+  z-index: 1000;
+}
+
+.logo-green {
+  color: var(--accent-green);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav {
+  display: none;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #292929;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: #00c76f;
+}
+
+/* Dark theme */
+body.dark-theme .nav-list a {
+  color: var(--dark-theme-text-color);
+}
+
+/* Burger */
+.burger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.burger-line {
+  width: 25px;
+  height: 2px;
+  background-color: #292929;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.burger:hover .burger-line {
+  background-color: var(--accent-green);
+}
+/* Focus */
+.burger:focus .burger-line {
+  background-color: var(--accent-green);
+  outline: none;
+}
+.burger:active .burger-line {
+  background-color: var(--accent-green);
+}
+.burger:active .burger-line:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
+}
+.burger:active .burger-line:nth-child(2) {
+  opacity: 0;
+}
+.burger:active .burger-line:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  /* Background-image */
+  background-image: url('../img/header/header-mobile-bg.png');
+  background-size: contain;
+  background-position: center 45px;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-resolution: 192dpi),
+  only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .mobile-menu {
+    background-image: url('../img/header/header-mobile-bg@2x.png');
+  }
+}
+
+.mobile-nav-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.mobile-nav-list li {
+  margin-bottom: 40px;
+}
+
+.mobile-nav-list a {
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #292929;
+  transition: color 0.3s;
+}
+
+.mobile-nav-list a:hover {
+  color: #00c76f;
+}
+
+/* Button close */
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+}
+
+.close-menu:hover {
+  color: #00c76f;
+}
+
+.close-menu:focus {
+  outline: none;
+  color: #00c76f;
+}
+
+.visually-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Dark theme - Mobile menu */
+body.dark-theme .burger-line {
+  background-color: #f0f0f0;
+}
+body.dark-theme .mobile-menu {
+  background-color: #2a2d32;
+}
+
+body.dark-theme .mobile-nav-list a {
+  color: var(--dark-theme-text-color);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .logo {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .theme-toggle {
+    margin-right: 40px;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* No scroll effect */
+body.no-scroll {
+  overflow: hidden;
 }
