@@ -8,7 +8,7 @@
     <script type="module" crossorigin src="/portfoliators-team/index.js"></script>
     <link rel="modulepreload" crossorigin href="/portfoliators-team/assets/vendor-TJyhOHm0.js">
     <link rel="stylesheet" crossorigin href="/portfoliators-team/assets/vendor-6W86LUDG.css">
-    <link rel="stylesheet" crossorigin href="/portfoliators-team/assets/index-CmPhkv1r.css">
+    <link rel="stylesheet" crossorigin href="/portfoliators-team/assets/index-ECz5KSWQ.css">
   </head>
   <body>
     <header class="header">
@@ -27,7 +27,7 @@
       <ul class="nav-list">
         <li><a href="#about">About me</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#together-section">Contacts</a></li>
       </ul>
     </nav>
 
@@ -46,7 +46,7 @@
       <ul class="mobile-nav-list">
         <li><a href="#about">About me</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#together-section">Contacts</a></li>
       </ul>
     </nav>
   </div>
@@ -74,7 +74,7 @@
         <svg class="icon-order" width="28" height="28">
           <use href="/portfoliators-team/assets/icon-D7iUgtZ2.svg#icon-Arrow-long"></use>
         </svg>
-        <a href="#togather-section" class="order-link">
+        <a href="#together-section" class="order-link">
           <p>order the project</p>
         </a>
         <div class="order-background"></div>
@@ -130,15 +130,15 @@
   </div>
 </section>
 
-      <section class="about-me">
+      <section id="about" class="about-me">
   <div class="container">
     <h2 class="about-title">ABOUT <span>ME</span></h2>
 
     <div class="about-content">
       <div class="about-image">
         <img
-          srcset="../img/about/about.webp 1x, ../img/about/about@2x.webp 2x"
-          src="../img/about/about.webp"
+          srcset="/portfoliators-team/assets/about-CSqpRbj-.webp 1x, /portfoliators-team/assets/about@2x-CokOSBlb.webp 2x"
+          src="/portfoliators-team/assets/about-CSqpRbj-.webp"
           alt="Lloyd Jefferson"
         />
       </div>
@@ -258,10 +258,11 @@
   });
 </script>
 
-      <section class="projects-section">
+      <section id="projects" class="projects-section">
   <div class="container">
     <div class="projects-header">
-      <h2 class="projects-title">My 
+      <h2 class="projects-title">
+        My
         <span class="projects-green-part">Projects</span>
       </h2>
       <ul class="projects-menu"></ul>
@@ -269,6 +270,7 @@
     </div>
   </div>
 </section>
+
 
       <section class="benefits">
     <h2 class="benefits-head">
@@ -331,10 +333,9 @@
         Frequently Asked <span class="accent-color">Questions</span>
         </h2>
     <picture>
-      
-    <source srcset="/portfoliators-team/assets/faq-bg-COqQZtJf.png 1x, /portfoliators-team/" media="(min-width: 1158px)" />
-    <img class="img-faq" src="/portfoliators-team/assets/faq-bg-COqQZtJf.png" alt="decor" />
-</picture>
+        <source srcset="/portfoliators-team/assets/faq-bg-COqQZtJf.png 1x, /portfoliators-team/" media="(min-width: 1158px)"/>
+    <img class="img-faq" src="/portfoliators-team/assets/faq-bg-COqQZtJf.png" alt="decor"/>
+    </picture>
         <ul class="accordion-container accordion" data-accordion></ul>
     </div>
 </section>
@@ -361,9 +362,9 @@
 </section>
 
       
-<section class="together-section">
-  <div class="background"></div>
-  <div class="container">
+<section id="together-section"  class="together-section">
+ 
+  <div class="container"> <div class="background"></div>
   <h1 class="title-together">
     LET'S <span class="title-span">WORK TOGETHER</span>
   </h1>
@@ -373,20 +374,18 @@
         Contact me to transform your ideas into exceptional solutions.
       </h2>
       <ul class="contacts-together">
-        <li>
-          <svg width="24" height="24"> <use href="/portfoliators-team/assets/icon-D7iUgtZ2.svg#icon-phone"></use></svg>
-
-          
+        <li class="item-togather">
+          <svg width="24" height="24" viewBox="0 0 32 32"> <use href="/portfoliators-team/assets/icon-D7iUgtZ2.svg#icon-phone"></use></svg>
           <a href="tel:+380904567890" class="text-icon">+38 090 456 78 90</a>
         </li>
-        <li>
-          <svg width="24" height="24"> <use href="/portfoliators-team/assets/icon-D7iUgtZ2.svg#icon-mail"></use></svg>
+        <li class="item-togather">
+          <svg width="24" height="24" viewBox="0 0 32 32"> <use href="/portfoliators-team/assets/icon-D7iUgtZ2.svg#icon-mail"></use></svg>
           <a href="mailto:lloydjefferson@gmail.com" class="text-icon"
             >lloydjefferson@gmail.com</a
           >
         </li>
-        <li>
-          <svg width="24" height="24"> <use href="/portfoliators-team/assets/icon-D7iUgtZ2.svg#icon-map"></use></svg>
+        <li class="item-togather">
+          <svg width="24" height="24" viewBox="0 0 32 32"> <use href="/portfoliators-team/assets/icon-D7iUgtZ2.svg#icon-map"></use></svg>
           <span class="text-icon">USA, New York</span>
         </li>
       </ul>
@@ -413,7 +412,7 @@
     </form>
   </div>
   <!-- Модальне вікно -->
-  <div id="interestModal" class="interestModal " >
+  <div id="interestModal" class="interestModal hidden" >
     
       <div class="modal-content">
       <button id="closeModal" class="close-btn"> 
@@ -425,6 +424,7 @@
     </div>
   </div>
 </section>
+
 
 
     </main>
