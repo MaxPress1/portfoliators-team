@@ -1,8 +1,8 @@
 .hero {
-    padding-bottom: 80px;
-    padding-top: 112px;
-    background-image: url(/img/hero/background-phone.png);
-    background-repeat: no-repeat; 
+  padding-bottom: 80px;
+  padding-top: 112px;
+  background-image: url(/img/hero/background-phone.png);
+  background-repeat: no-repeat;
 }
 
 @media (min-resolution: 192dpi) {
@@ -12,11 +12,11 @@
   }
 }
 .hero-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 72px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 72px;
 }
 
 .hero-title {
@@ -30,7 +30,7 @@
 }
 
 .hero-image {
-    display: inline-block;
+  display: inline-block;
 }
 
 .hidden-img {
@@ -40,7 +40,7 @@
   margin: -1px;
   border: 0;
   padding: 0;
-  
+
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -51,49 +51,74 @@
   color: var(--accent-green);
 }
 
-body.dark-theme .hero-title{
-    color: var(--dark-theme-text-color);
+body.dark-theme .hero-title {
+  color: var(--dark-theme-text-color);
 }
 
 .order-section {
-    display: flex;
+  display: flex;
 }
 
 .icon-order {
-    margin-right: 12px;
+  margin-right: 12px;
 }
 
-.order-link  {
-    margin-bottom: 84px;
-    z-index: 1;
+.order-link {
+  margin-bottom: 84px;
+  z-index: 1;
 }
-.order-link p{
-    text-transform: uppercase;
-    font-family: 'Popins', sans-serif;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
-    font-size: 18px;
-}
-
-
-body.dark-theme .order-link{
-    color: var(--dark-theme-text-color);
+.order-link p {
+  text-transform: uppercase;
+  font-family: 'Popins', sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  font-size: 18px;
 }
 
+body.dark-theme .order-link {
+  color: var(--dark-theme-text-color);
+}
 
 .order-background {
-    z-index: 0;
-    position: absolute;
-    top: 255px;
-    left: 188px;
-    background-color: #BCDFD1;
-    width: 165px;
-    height: 92px;
-    border-radius: 16px;
+  position: absolute;
+  top: 240px;
+  left: 188px;
+  background-color: #bcdfd1;
+  width: 165px;
+  height: 92px;
+  border-radius: 16px;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
-body.dark-theme .order-background{
-    background-color: var(--accent-green);
+@keyframes arrowMove {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.order-link:hover + .order-background {
+  transform: scale(1.05);
+  background-color: var(--accent-green);
+  transition: transform 0.3s, background-color 0.3s;
+}
+.icon-order {
+  animation: arrowMove 1.5s infinite ease-in-out;
+}
+
+.order-link p {
+  transition: transform 0.3s;
+}
+
+.order-link:hover p {
+  transform: scale(1.1);
+}
+
+body.dark-theme .order-background {
+  background-color: var(--accent-green);
 }
 
 .hero-description {
@@ -110,13 +135,12 @@ body.dark-theme .order-background{
   color: var(--accent-green);
 }
 
-body.dark-theme .hero-description{
-    color: var(--dark-theme-text-color);
+body.dark-theme .hero-description {
+  color: var(--dark-theme-text-color);
 }
 
 .hero-container-social {
-    background-color: #E4E5E6;
-    
+  background-color: #e4e5e6;
 }
 
 .hero-socials {
@@ -141,110 +165,109 @@ body.dark-theme .hero-description{
   color: var(--accent-green);
 }
 
-body.dark-theme .hero-container-social{
-    background-color: #2A2D32;
+body.dark-theme .hero-container-social {
+  background-color: #2a2d32;
 }
 
-body.dark-theme .hero-social-item{
-    color: var(--dark-theme-text-color);
+body.dark-theme .hero-social-item {
+  color: var(--dark-theme-text-color);
 }
 
-
-@media screen and (min-width:768px){
-    .hero {
+@media screen and (min-width: 768px) {
+  .hero {
     padding-top: 88px;
     background-image: url(../img/hero/background-tablet.png);
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     padding-bottom: 124px;
-}
-
-    @media (min-resolution: 192dpi) {
-    .hero {
-    background-image: url(/img/hero/background-tablet@2x.png);
-    background-size: cover;
   }
-}
 
-    .hero-title {
-        line-height: 1.1;
-        letter-spacing: 0.01em;
-        font-size: 136px;
-        margin-bottom: 92px;
+  @media (min-resolution: 192dpi) {
+    .hero {
+      background-image: url(/img/hero/background-tablet@2x.png);
+      background-size: cover;
     }
+  }
 
-    .icon-order {
+  .hero-title {
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    font-size: 136px;
+    margin-bottom: 92px;
+  }
+
+  .icon-order {
     margin-right: 16px;
-}
+  }
 
-    .order-link  {
+  .order-link {
     margin-bottom: 72px;
-}
-    .order-link p{
+  }
+  .order-link p {
     line-height: 1.6;
     font-size: 20px;
-}
+  }
 
-    .order-background {
+  .order-background {
     top: 508px;
     left: 202px;
     width: 261px;
-    height:96px;
-}
+    height: 96px;
+  }
 
-    .hero-description {
-        font-size: 20px;
-        margin-bottom: 80px;
-}   
+  .hero-description {
+    font-size: 20px;
+    margin-bottom: 80px;
+  }
 
-    .hero-socials {
-        flex-direction: row;
-        gap: 40px;
-        padding: 40px;
-        justify-content: center;
+  .hero-socials {
+    flex-direction: row;
+    gap: 40px;
+    padding: 40px;
+    justify-content: center;
+  }
 }
-    }
 
 @media screen and (min-width: 1280px) {
-        .hero {
+  .hero {
     padding-top: 88px;
     background-image: url(../img/hero/background-desktop.png);
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     padding-bottom: 124px;
-}
+  }
 
-    @media (min-resolution: 192dpi) {
+  @media (min-resolution: 192dpi) {
     .hero {
-    background-image: url(/img/hero/background-desktop@2x.png);
-    background-size: cover;
-  } 
-}
+      background-image: url(/img/hero/background-desktop@2x.png);
+      background-size: cover;
+    }
+  }
 
-    .visabiliti {
-        position: static;
+  .visabiliti {
+    position: static;
     width: auto;
     height: auto;
     margin: 0;
     clip-path: none;
     clip: auto;
     overflow: visible;
-    }
+  }
 
-    .hero-title {
-        margin-bottom: 112px;
-    }
+  .hero-title {
+    margin-bottom: 112px;
+  }
 
-       .order-background {
+  .order-background {
     top: 375px;
     left: 200px;
-}
+  }
 
-    .hero-order-descriptional {
-        display: flex;
-        justify-content: space-between;
-    }
+  .hero-order-descriptional {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .hero-description {
-        max-width: 590px;
-        margin-top: -25px;
-    }
+  .hero-description {
+    max-width: 590px;
+    margin-top: -25px;
+  }
 }

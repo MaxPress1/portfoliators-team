@@ -87,7 +87,7 @@
 .lists-about li {
   position: relative;
   padding-left: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .lists-about li::before {
@@ -120,6 +120,7 @@ body.dark-theme .lists-about {
   }
 
   .about-me {
+    padding-top: 20px;
     padding-bottom: 124px;
   }
 
@@ -166,6 +167,10 @@ body.dark-theme .lists-about {
   .education,
   .role {
     width: 336px;
+  }
+
+  .lists-about li {
+    margin-bottom: 16px;
   }
 }
 
