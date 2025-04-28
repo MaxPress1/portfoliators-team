@@ -1,0 +1,251 @@
+.hero {
+    padding-bottom: 80px;
+    padding-top: 112px;
+    background-image: url(/img/hero/background-phone.png);
+    background-repeat: no-repeat; 
+}
+
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: url(/img/hero/background-phone@2x.png);
+    background-size: cover;
+  }
+}
+.hero-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 72px;
+}
+
+.hero-title {
+  font-family: 'Impact', sans-serif;
+  font-size: 64px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  margin-bottom: 40px;
+}
+
+.hero-image {
+    display: inline-block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.highlight {
+  color: var(--accent-green);
+}
+
+body.dark-theme .hero-title{
+    color: var(--dark-theme-text-color);
+}
+
+.order-section {
+    display: flex;
+}
+
+.icon-order {
+    margin-right: 12px;
+}
+
+.order-link  {
+    margin-bottom: 84px;
+    z-index: 999;
+}
+.order-link p{
+    text-transform: uppercase;
+    font-family: 'Popins', sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    font-size: 18px;
+    z-index: 999;
+}
+
+
+body.dark-theme .order-link{
+    color: var(--dark-theme-text-color);
+}
+
+
+.order-background {
+    position: absolute;
+    top: 255px;
+    left: 188px;
+    background-color: #BCDFD1;
+    width: 165px;
+    height: 92px;
+    border-radius: 16px;
+}
+
+body.dark-theme .order-background{
+    background-color: var(--accent-green);
+}
+
+.hero-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin-bottom: 72px;
+}
+
+.text-green {
+  color: var(--accent-green);
+}
+
+body.dark-theme .hero-description{
+    color: var(--dark-theme-text-color);
+}
+
+.hero-container-social {
+    background-color: #E4E5E6;
+    
+}
+
+.hero-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+}
+
+.hero-socials li a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  font-weight: 300;
+  transition: color 0.3s;
+  color: var(--text-color);
+}
+
+.hero-socials li a:hover {
+  color: var(--accent-green);
+}
+
+body.dark-theme .hero-container-social{
+    background-color: #2A2D32;
+}
+
+body.dark-theme .hero-social-item{
+    color: var(--dark-theme-text-color);
+}
+
+
+@media screen and (min-width:768px){
+    .hero {
+    padding-top: 88px;
+    background-image: url(../img/hero/background-tablet.png);
+    background-repeat: no-repeat; 
+    padding-bottom: 124px;
+}
+
+    @media (min-resolution: 192dpi) {
+    .hero {
+    background-image: url(/img/hero/background-tablet@2x.png);
+    background-size: cover;
+  }
+}
+
+    .hero-title {
+        line-height: 1.1;
+        letter-spacing: 0.01em;
+        font-size: 136px;
+        margin-bottom: 92px;
+    }
+
+    .icon-order {
+    margin-right: 16px;
+}
+
+    .order-link  {
+    margin-bottom: 72px;
+    z-index: 999;
+}
+    .order-link p{
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+    .order-background {
+    top: 508px;
+    left: 202px;
+    width: 261px;
+    height:96px;
+}
+
+    .hero-description {
+        font-size: 20px;
+        margin-bottom: 80px;
+}   
+
+    .hero-socials {
+        flex-direction: row;
+        gap: 40px;
+        padding: 40px;
+        justify-content: center;
+}
+    }
+
+@media screen and (min-width: 1280px) {
+        .hero {
+    padding-top: 88px;
+    background-image: url(../img/hero/background-desktop.png);
+    background-repeat: no-repeat; 
+    padding-bottom: 124px;
+}
+
+    @media (min-resolution: 192dpi) {
+    .hero {
+    background-image: url(/img/hero/background-desktop@2x.png);
+    background-size: cover;
+  } 
+}
+
+    .visually-hidden {
+        position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip-path: none;
+    clip: auto;
+    overflow: visible;
+    }
+
+    .hero-title {
+        margin-bottom: 112px;
+    }
+
+       .order-background {
+    top: 375px;
+    left: 200px;
+}
+
+    .hero-order-descriptional {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero-description {
+        max-width: 590px;
+        margin-top: -25px;
+    }
+}
