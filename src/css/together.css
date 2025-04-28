@@ -1,42 +1,39 @@
 .together-section {
-  position: relative;
-  background-color: #f7f7f7; /* світлий фон */
-  overflow: visible;
+  background-color: #f7f7f7;
 }
 
 .background {
   position: absolute;
-  background-position: top right 640px;
+  background-position: top right 32px;
   pointer-events: none;
   width: 100%;
   height: 100%;
-  background-image: url('../img/together-bg.png');
+  background-image: url('/img/together-bg.png');
   /* background-size: cover; */
-
   background-repeat: no-repeat;
   z-index: 0; /* фон під контентом */
 }
-/* .container {
+.container {
   position: relative;
-  z-index: 1;
-} */
+  overflow: hidden;
+}
 .wrap-together {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 136px;
+  gap: 80px;
   margin-top: 80px;
   padding-bottom: 164px;
 }
 
 .title-together {
   text-align: left;
-  /* align-self: flex-start; */
   font-size: 108px;
   line-height: 124px;
   margin-bottom: 40px;
-  width: 510px;
+  max-width: 510px;
   color: #292929;
 }
 
@@ -46,12 +43,12 @@
 
 .together-left {
   display: flex;
-  flex: 1;
+  flex: 1 1 45%;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  max-width: 488px;
+  max-width: 500px;
   height: 288px;
   gap: 120px;
   min-width: 300px;
@@ -64,11 +61,13 @@
   font-weight: 400;
 }
 .form-together {
-  flex: 1;
+  flex: 1 1 45%;
   min-width: 300px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
-  width: 592px;
+  max-width: 592px;
+  width: 100%;
   gap: 32px;
 }
 
@@ -120,6 +119,7 @@ textarea::placeholder {
   line-height: 24px;
   color: #292929;
   padding: 16px;
+  letter-spacing: 0.5px;
   cursor: pointer;
   position: relative;
 }
@@ -174,55 +174,131 @@ textarea::placeholder {
 /* це треба перевірити!!!!!!! */
 
 /*  for tablet */
-@media (max-width: 768px) {
-  .together-section {
-    padding-top: 20px auto;
-  }
+@media (min-width: 768px) and (max-width: 1280px) {
   .wrap-together {
     flex-direction: column;
     /* align-items: center; */
     gap: 60px;
     padding: 40px 20px;
+    padding-bottom: 124px;
   }
 
   .title-together {
-    max-width: 507px;
+    /* max-width: 507px; */
     font-size: 108px;
     line-height: 124px;
     width: 100%;
     text-align: left;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 
   .form-together,
   .together-left {
     width: 100%;
-    max-width: 100%;
+    max-width: 600px;
   }
 
   .text-together {
     text-align: left;
     max-width: 488px;
     font-size: 20px;
+    line-height: 32px;
     /* margin-bottom: 32px; */
   }
 
   .contacts-together {
+    display: flex;
     flex-direction: row;
-    gap: 14px;
-    /* max-width: 639px; */
+    flex-wrap: nowrap;
+    justify-content: center;
+    /* gap: 16px; */
+    max-width: 639px;
   }
+  .item-togather {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+  .item-togather svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
   .text-icon {
-    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    /* font-family: 'Poppins';
     font-weight: 300;
     line-height: 24px;
-    color: #292929;
-    /* padding: 16px; */
+    letter-spacing: 0.5px; */
   }
+}
+
+/*  для телефону - - - - - - - - - - - - - - - - -  - - - - - - - - - - - -*/
+@media (min-width: 360px) and (max-width: 768px) {
+  .wrap-together {
+    padding-bottom: 80px;
+    display: block;
+    margin-top: 0;
+  }
+
+  .title-together {
+    /* max-width: 507px; */
+    font-size: 52px;
+    line-height: 64px;
+    letter-spacing: 1.8px;
+    padding-bottom: 40px;
+    margin-bottom: 0;
+  }
+
   .together-left {
-    height: 120px;
-    gap: 32px;
-    min-width: 639px;
+    display: block;
+  }
+  .form-together,
+  .together-left {
+    width: 100%;
+    max-width: 320px;
+    padding: 40px;
+  }
+
+  .text-together {
+    text-align: left;
+    max-width: 320px;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    margin-bottom: 32px;
+  }
+
+  .contacts-together {
+    justify-content: left;
+    max-width: 320px;
+  }
+  .item-togather {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+  .item-togather svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  .text-icon {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+  }
+  .contact-btn {
+    width: 100%;
+    line-height: 24px;
+    letter-spacing: 0.5 px;
+  }
+  .background {
+    display: none;
   }
 }
 
