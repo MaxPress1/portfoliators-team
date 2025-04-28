@@ -33,7 +33,7 @@
     display: inline-block;
 }
 
-.visually-hidden {
+.hidden-img {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -220,7 +220,7 @@ body.dark-theme .hero-social-item{
   } 
 }
 
-    .visually-hidden {
+    .visabiliti {
         position: static;
     width: auto;
     height: auto;
