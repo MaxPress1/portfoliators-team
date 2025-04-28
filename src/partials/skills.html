@@ -1,0 +1,65 @@
+<section class="tech-skills">
+  <h2 class="visually-hidden">Tech Skills</h2>
+
+  <div class="marquee-wrapper top">
+    <ul class="marquee marquee-top">
+      <li>HTML/CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>React Native</li>
+      <li>Typescript</li>
+      <!-- дублювання -->
+      <li>HTML/CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>React Native</li>
+      <li>Typescript</li>
+      <li>HTML/CSS</li>
+      <li>HTML/CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>React Native</li>
+      <li>Typescript</li>
+      <li>HTML/CSS</li>
+    </ul>
+  </div>
+
+  <div class="marquee-wrapper bottom">
+    <ul class="marquee marquee-bottom">
+      <li>Typescript</li>
+      <li>React Native</li>
+      <li>Node.js</li>
+      <li>React</li>
+      <li>JavaScript</li>
+      <li>HTML/CSS</li>
+      <!-- дублювання -->
+      <li>Typescript</li>
+      <li>React Native</li>
+      <li>Node.js</li>
+      <li>React</li>
+      <li>JavaScript</li>
+      <li>HTML/CSS</li>
+      <li>Typescript</li>
+      <li>React Native</li>
+      <li>Node.js</li>
+      <li>React</li>
+      <li>JavaScript</li>
+      <li>HTML/CSS</li>
+      <li>Typescript</li>
+    </ul>
+  </div>
+</section>
+
+<!-- імітувати безкінечну прокрутку при перезавантаженні -->
+<script>
+  const delay = Math.random() * 15;
+  localStorage.setItem('marquee-delay', delay);
+
+  const savedDelay = localStorage.getItem('marquee-delay');
+  document.querySelectorAll('.marquee').forEach(el => {
+    el.style.animationDelay = `-${savedDelay}s`;
+  });
+</script>
