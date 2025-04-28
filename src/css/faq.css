@@ -53,7 +53,7 @@
   }                                                 
 
   body.dark-theme .ac-text {
-    color: var(--background-color) !important;
+    color: #F0F0F0 !important;
   }
   .ac .ac-trigger {
     font-weight: 400 !important;
@@ -67,7 +67,7 @@
     transition: background-color 0.3s ease;
   }
   body.dark-theme .ac .ac-trigger {
-    color: var(--background-color) !important;
+    color: #F0F0F0 !important;
   }
   .ac-trigger::after {
     content: none !important;
@@ -103,8 +103,8 @@
     transition: transform 0.3s ease;
   }
   body.dark-theme .arrow {
-    border-right: 2px solid var(--dark-theme-text-color);
-    border-bottom: 2px solid var(--dark-theme-text-color);
+    border-right: 2px solid #F0F0F0;
+    border-bottom: 2px solid #F0F0F0;
   }
   .ac.is-active .arrow {
     transform: translateY(-50%) rotate(-135deg);
@@ -170,6 +170,6 @@
       display: inline;
       max-width: 526px;
       max-height: 408px;
-      margin-top: 380px;
+      margin-top: 60px;
     }
   }
