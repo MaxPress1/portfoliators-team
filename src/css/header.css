@@ -285,4 +285,7 @@ body.dark-theme .mobile-nav-list a {
 /* No scroll effect */
 body.no-scroll {
   overflow: hidden;
+  height: 100%;
+  position: fixed;
+  width: 100%;
 }
