@@ -1,8 +1,4 @@
-/* Mobile Version */
- .projects-section {
-    padding-bottom: 80px;
-  }
-  
+/* Mobile Version */ 
   .projects-header {
     display: flex;
     flex-direction: column;
@@ -151,10 +147,6 @@
 
   /* Tablet Version */
   @media (min-width: 768px) {
-    .projects-section {
-      padding-bottom: 124px;
-    }
-  
     .projects-title {
       font-size: 108px;
       line-height: 1.15;
@@ -188,10 +180,6 @@
   
   /* Desktop Version */
   @media (min-width: 1280px) {
-    .projects-section {
-      padding-bottom: 164px;
-    }
-  
     .projects-menu {
       gap: 80px;
     }
