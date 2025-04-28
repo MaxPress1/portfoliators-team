@@ -87,7 +87,7 @@ const initFAQ = () => {
       panel.setAttribute('aria-expanded', index === 0 ? 'true' : 'false');
     });
   } catch (error) {
-    console.error('Error initializing FAQ:', error);
+    console.error('Error initializing FAQ:', error); 
   }
 };
 
