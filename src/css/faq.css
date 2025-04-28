@@ -46,9 +46,12 @@
     background: none !important;
     transition: all 0.3s ease;
   }
+
   body.dark-theme .ac {
     border: var(--text-color) !important;
-  }
+    border-bottom: 1px solid rgba(204, 204, 204, 1) !important;
+  }                                                 
+
   body.dark-theme .ac-text {
     color: var(--background-color) !important;
   }
@@ -74,9 +77,11 @@
     border-radius: 16px;
     color: #292929 !important;
   }
-  body.dark-theme .ac.is-active {
+ 
+   body.dark-theme .ac.is-active {
     background: #204136 !important;
-  }
+    border-bottom: 1px solid #204136 !important;
+  } 
   .ac-header {
     display: flex;
     align-items: flex-start;
