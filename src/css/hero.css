@@ -271,3 +271,34 @@ body.dark-theme .hero-social-item {
     margin-top: -25px;
   }
 }
+
+/* Animation for hero image and title */
+@keyframes rotateIn {
+  from {
+    transform: rotate(-90deg) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.hero-image.visabiliti {
+  animation: rotateIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  animation: fadeIn 2s ease-out;
+}
