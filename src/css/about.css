@@ -4,6 +4,7 @@
 }
 
 .about-title {
+      
   font-family: 'Impact', sans-serif;
   font-size: 52px;
   font-weight: 400;
@@ -120,7 +121,6 @@ body.dark-theme .lists-about {
   }
 
   .about-me {
-    padding-top: 20px;
     padding-bottom: 124px;
   }
 
@@ -186,6 +186,11 @@ body.dark-theme .lists-about {
   .about-me .container {
     background-size: 35%;
     background-position: right 4% bottom 28%;
+  }
+
+
+  .about-title {
+    margin-top: 20px;
   }
 
   .about-me {
