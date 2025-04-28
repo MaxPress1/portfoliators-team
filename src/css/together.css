@@ -1,6 +1,38 @@
 .together-section {
   background-color: #f7f7f7;
 }
+/* Світла тема секції */
+.together-section {
+  background-color: #f7f7f7;
+  color: #292929;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Темна тема секції */
+body.dark-theme .together-section {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+/* .together-section.dark .contact-email {
+  background-color: #2a2d32;
+} */
+body.dark-theme .title-together {
+  color: #f0f0f0;
+}
+body.dark-theme .text-icon {
+  color: #f0f0f0;
+}
+
+body.dark-theme .contact-email,
+body.dark-theme .textarea-together {
+  background-color: #2a2d32;
+  color: #f0f0f0;
+}
+
+body.dark-theme .contact-email::placeholder,
+body.dark-theme .textarea-together::placeholder {
+  color: #f0f0f0;
+}
 
 .background {
   position: absolute;
@@ -35,6 +67,9 @@
   margin-bottom: 40px;
   max-width: 510px;
   color: #292929;
+}
+.title-together.dark {
+  color: #f0f0f0;
 }
 
 .title-span {
