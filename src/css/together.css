@@ -9,9 +9,29 @@
 }
 
 /* Темна тема секції */
-.together-section.dark {
+body.dark-theme .together-section {
   background-color: #1e1e1e;
   color: #ffffff;
+}
+/* .together-section.dark .contact-email {
+  background-color: #2a2d32;
+} */
+body.dark-theme .title-together {
+  color: #f0f0f0;
+}
+body.dark-theme .text-icon {
+  color: #f0f0f0;
+}
+
+body.dark-theme .contact-email,
+body.dark-theme .textarea-together {
+  background-color: #2a2d32;
+  color: #f0f0f0;
+}
+
+body.dark-theme .contact-email::placeholder,
+body.dark-theme .textarea-together::placeholder {
+  color: #f0f0f0;
 }
 
 .background {
