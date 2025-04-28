@@ -1,7 +1,16 @@
+/* Animation list */
+.benefits-list {
+  transition: transform 0.5s;
+}
+
+.benefits-list:hover {
+  transform: translateY(-10px);
+}
+
 .benefits {
   max-width: 360px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 80px 20px;
 }
 .benefits-head {
   font-family: 'Impact', sans-serif;
@@ -71,7 +80,7 @@ body.dark-theme .benefits-text {
   .benefits {
     max-width: 768px;
     margin: 0 auto;
-    padding: 62px 32px;
+    padding: 124px 32px;
   }
   .benefits-head {
     font-size: 108px;
@@ -99,7 +108,7 @@ body.dark-theme .benefits-text {
   .benefits {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 82px 32px;
+    padding: 164px 32px;
     background-image: url(../img/faq/faq-bg.png);
     background-position: top right;
     background-repeat: no-repeat;
