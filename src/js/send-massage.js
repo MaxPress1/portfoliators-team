@@ -46,3 +46,9 @@ contactForm.addEventListener('submit', async function (event) {
 closeModal.addEventListener('click', function () {
   interestModal.classList.add('hidden');
 });
+
+// const toggleButton = document.getElementById('theme-toggle');
+
+// toggleButton.addEventListener('click', () => {
+//   document.body.classList.toggle('dark-theme');
+// });
