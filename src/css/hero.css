@@ -65,7 +65,7 @@ body.dark-theme .hero-title{
 
 .order-link  {
     margin-bottom: 84px;
-    z-index: 999;
+    z-index: 1;
 }
 .order-link p{
     text-transform: uppercase;
@@ -73,7 +73,6 @@ body.dark-theme .hero-title{
     line-height: 1.5;
     letter-spacing: 0.03em;
     font-size: 18px;
-    z-index: 999;
 }
 
 
@@ -83,6 +82,7 @@ body.dark-theme .order-link{
 
 
 .order-background {
+    z-index: 0;
     position: absolute;
     top: 255px;
     left: 188px;
@@ -178,7 +178,6 @@ body.dark-theme .hero-social-item{
 
     .order-link  {
     margin-bottom: 72px;
-    z-index: 999;
 }
     .order-link p{
     line-height: 1.6;
