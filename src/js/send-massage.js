@@ -52,3 +52,32 @@ closeModal.addEventListener('click', function () {
 // toggleButton.addEventListener('click', () => {
 //   document.body.classList.toggle('dark-theme');
 // });
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleInput = document.getElementById('theme-toggle-checkbox');
+  const togetherSection = document.getElementById('together-section'); // твоя секція
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-theme');
+    toggleInput.checked = true;
+    if (togetherSection) {
+      togetherSection.classList.add('dark'); // додаємо клас теми до секції
+    }
+  }
+
+  toggleInput.addEventListener('change', () => {
+    if (toggleInput.checked) {
+      document.body.classList.add('dark-theme');
+      if (togetherSection) {
+        togetherSection.classList.add('dark');
+      }
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-theme');
+      if (togetherSection) {
+        togetherSection.classList.remove('dark');
+      }
+      localStorage.setItem('theme', 'light');
+    }
+  });
+});

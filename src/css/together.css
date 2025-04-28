@@ -1,6 +1,18 @@
 .together-section {
   background-color: #f7f7f7;
 }
+/* Світла тема секції */
+.together-section {
+  background-color: #f7f7f7;
+  color: #292929;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Темна тема секції */
+.together-section.dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
 
 .background {
   position: absolute;
@@ -35,6 +47,9 @@
   margin-bottom: 40px;
   max-width: 510px;
   color: #292929;
+}
+.title-together.dark {
+  color: #f0f0f0;
 }
 
 .title-span {
