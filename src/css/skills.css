@@ -51,7 +51,7 @@ body {
   letter-spacing: 0.5px;
 
   white-space: nowrap;
-  animation-duration: 15s;
+  animation-duration: 30s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;

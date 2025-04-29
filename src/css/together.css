@@ -375,3 +375,13 @@ html.no-scroll {
 .contacts-together li:hover svg {
   transform: scale(1.2);
 }
+/* Червоний бордер */
+.input-error {
+  border: 2px solid red;
+}
+
+.input-error::placeholder {
+  color: red;
+}
+
+/*  */
