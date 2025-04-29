@@ -82,6 +82,7 @@ body.dark-theme .ac.is-active {
   border-bottom: 1px solid #204136 !important;
 }
 .ac-header {
+  width: 335px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
