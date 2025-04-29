@@ -25,7 +25,7 @@ body.dark-theme .headline {
   justify-content: flex-start;
   flex-direction: column;
   gap: 0;
-  max-width: 272px;
+  max-width: 100%;
   margin-top: 40px;
   font-family: 'Poppins', sans-serif;
 }
@@ -34,7 +34,7 @@ body.dark-theme .headline {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding: 18px 14px;
+  padding: 18px 0;
   margin: 0 !important;
   border-top: 1px solid #e4e5e6 !important;
   border-bottom: 1px solid #e4e5e6 !important;
@@ -97,7 +97,7 @@ body.dark-theme .ac.is-active {
   border-bottom: 2px solid #292929;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 15px;
   transform: translateY(-50%) rotate(45deg);
   transition: transform 0.3s ease;
 }
