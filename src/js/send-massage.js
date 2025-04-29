@@ -1,17 +1,23 @@
 function validateForm() {
   const emailInput = contactForm.elements['user-email'];
   const messageInput = contactForm.elements['user-comment'];
+
+  const emailError = document.getElementById('email-error');
+  
   let isValid = true;
 
   const trimmedEmail = emailInput.value.trim();
 
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  console.log('Validating email...');
   if (!emailPattern.test(trimmedEmail)) {
-    console.log('Email is invalid');
     emailInput.classList.add('input-error');
+    emailError.textContent = 'Invalid email, try again';
+emailInput.classList.add('input-error');
+
     isValid = false;
   } else {
+    emailInput.classList.remove('input-error');
+    emailError.textContent = '';
     emailInput.classList.remove('input-error');
   }
 
