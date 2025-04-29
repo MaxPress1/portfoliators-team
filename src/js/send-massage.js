@@ -24,6 +24,8 @@ contactForm.addEventListener('submit', async function (event) {
 
     if (response.status === 201) {
       interestModal.classList.remove('hidden');
+      document.body.classList.add('no-scroll');
+      document.documentElement.classList.add('no-scroll');
       contactForm.reset();
     } else {
       const errorData = await response.json(); // розпарсюю відповідь..
@@ -45,4 +47,6 @@ contactForm.addEventListener('submit', async function (event) {
 
 closeModal.addEventListener('click', function () {
   interestModal.classList.add('hidden');
+  document.body.classList.remove('no-scroll');
+  document.documentElement.classList.remove('no-scroll');
 });

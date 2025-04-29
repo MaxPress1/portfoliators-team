@@ -1,21 +1,13 @@
 .together-section {
-  background-color: #f7f7f7;
-}
-/* Світла тема секції */
-.together-section {
-  background-color: #f7f7f7;
-  color: #292929;
-  transition: background-color 0.3s, color 0.3s;
+  padding-top: 164px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Темна тема секції */
 body.dark-theme .together-section {
-  background-color: #1e1e1e;
   color: #ffffff;
 }
-/* .together-section.dark .contact-email {
-  background-color: #2a2d32;
-} */
+
 body.dark-theme .title-together {
   color: #f0f0f0;
 }
@@ -28,26 +20,43 @@ body.dark-theme .textarea-together {
   background-color: #2a2d32;
   color: #f0f0f0;
 }
+body.dark-theme .modal-content {
+  background: #2a2d32;
+}
 
 body.dark-theme .contact-email::placeholder,
 body.dark-theme .textarea-together::placeholder {
   color: #f0f0f0;
 }
 
+body.dark-theme .close-btn svg {
+  color: #f0f0f0;
+}
+body,
+.together-section,
+.modal-content,
+.contact-email,
+.textarea-together,
+svg {
+  transition: background-color 0.3s ease, color 0.3s ease, fill 0.3s ease;
+}
 .background {
   position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-60%);
+  width: min(100%, 1280px);
   background-position: top right 32px;
   pointer-events: none;
-  width: 100%;
   height: 100%;
+
   background-image: url('/img/together-bg.png');
-  /* background-size: cover; */
   background-repeat: no-repeat;
   z-index: 0; /* фон під контентом */
 }
 .container {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .wrap-together {
   position: relative;
@@ -198,10 +207,21 @@ textarea::placeholder {
   top: 20px;
   right: 20px;
   border: none;
+  background: transparent;
+}
+.closeModal {
+  color: #292929;
 }
 .modal-content {
   position: relative;
 }
+body.no-scroll,
+html.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 .hidden {
   display: none;
 }
@@ -264,10 +284,6 @@ textarea::placeholder {
     margin: 0;
     padding: 0;
     font-size: 14px;
-    /* font-family: 'Poppins';
-    font-weight: 300;
-    line-height: 24px;
-    letter-spacing: 0.5px; */
   }
 }
 
@@ -330,10 +346,14 @@ textarea::placeholder {
   .contact-btn {
     width: 100%;
     line-height: 24px;
-    letter-spacing: 0.5 px;
+    letter-spacing: 0.5px;
   }
   .background {
     display: none;
+  }
+  .modal-content {
+    max-width: 320px;
+    padding: 32px 48px;
   }
 }
 
