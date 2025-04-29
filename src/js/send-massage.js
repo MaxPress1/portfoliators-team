@@ -1,3 +1,30 @@
+function validateForm() {
+  const emailInput = contactForm.elements['user-email'];
+  const messageInput = contactForm.elements['user-comment'];
+  let isValid = true;
+
+  const trimmedEmail = emailInput.value.trim();
+
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  console.log('Validating email...');
+  if (!emailPattern.test(trimmedEmail)) {
+    console.log('Email is invalid');
+    emailInput.classList.add('input-error');
+    isValid = false;
+  } else {
+    emailInput.classList.remove('input-error');
+  }
+
+  if (messageInput.value.trim() === '') {
+    messageInput.classList.add('input-error');
+    isValid = false;
+  } else {
+    messageInput.classList.remove('input-error');
+  }
+
+  return isValid;
+}
+
 const contactForm = document.getElementById('contactForm');
 const interestModal = document.getElementById('interestModal');
 const closeModal = document.getElementById('closeModal');
@@ -41,9 +68,38 @@ function hideModal() {
   enableScroll();
 }
 
+contactForm.elements['user-email'].addEventListener('blur', function () {
+  if (this.value.trim() !== '') {
+    validateForm();
+  } else {
+    this.classList.remove('input-error');
+  }
+});
+
+contactForm.elements['user-comment'].addEventListener('blur', function () {
+  if (this.value.trim() !== '') {
+    validateForm();
+  } else {
+    this.classList.remove('input-error');
+  }
+});
+
+contactForm.elements['user-email'].addEventListener('input', function () {
+  this.classList.remove('input-error');
+});
+
+contactForm.elements['user-comment'].addEventListener('input', function () {
+  this.classList.remove('input-error');
+});
+
 // Відправка форми
 contactForm.addEventListener('submit', async function (event) {
   event.preventDefault();
+
+  const isFormValid = validateForm();
+  if (!isFormValid) {
+    return;
+  }
 
   const email = contactForm.elements['user-email'].value.trim();
   const message = contactForm.elements['user-comment'].value.trim();
@@ -56,7 +112,7 @@ contactForm.addEventListener('submit', async function (event) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email: email }),
+        body: JSON.stringify({ email: email, comment: message }),
       }
     );
 
