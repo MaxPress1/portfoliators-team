@@ -21,18 +21,6 @@ hr {
     margin-bottom: 32px;
 }
 
-.logo-bold {
-  color: var(--text-color);
-}
-
-.logo-green {
-  color: var(--accent-green);
-}
-
-.logo-dot {
-  color: var(--text-color);
-}
-
 .footer-social {
     
   list-style: none;
